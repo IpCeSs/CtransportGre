@@ -42,8 +42,7 @@ namespace transportGre
             List<Arnaud> ArnaudSansDoublons = ListArnauds.GroupBy(n => n.Name).Select(g => g.First()).ToList();
             foreach (Arnaud ListArnaud in ArnaudSansDoublons)
             {
-                          
-                WriteLine(ListArnaud.Name);
+                WriteLine($"arret : {ListArnaud.Name} ligne : {ListArnaud.Lines[0]} ");
             }
 
             // Clean up the streams and the response.  

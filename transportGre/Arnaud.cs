@@ -16,6 +16,6 @@ namespace transportGre
         public string Name { get; set; }
         public double Lon { get; set; }
         public double Lat { get; set; }
-        public List<string> ListArnauds { get; set; }
+        public List<string> Lines { get; set; }
     }
 }
