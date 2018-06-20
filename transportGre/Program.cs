@@ -13,7 +13,7 @@ namespace transportGre
     {
         static void Main(string[] args)
         {
-            WebRequest request = WebRequest.Create("http://data.metromobilite.fr/api/linesNear/json?x=5.709360123&y=45.176494599999984&dist=200&details=true");
+            WebRequest request = WebRequest.Create("http://data.metromobilite.fr/api/linesNear/json?x=5.709360123&y=45.176494599999984&dist=1000&details=true");
 
             // Get the response.  
             WebResponse response = request.GetResponse();
@@ -32,11 +32,18 @@ namespace transportGre
             /*
              * on fait un liste de la classe Arnaud
              * que l'on converti grâce au nuget json.net pour pouvoir utiliser les objets
+             * on itère dans la liste avec un foreach
              */
-            List<Arnaud> listArnauds = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Arnaud>>(responseFromServer);
-            foreach (Arnaud listArnaud in listArnauds)
+            List<Arnaud> ListArnauds = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Arnaud>>(responseFromServer);
+            /*
+             *On crée une liste qui groupe by nom (touts les memes noms sont mis ensemble, et on select 
+             * seulement le first de cette nouvelle liste
+             */
+            List<Arnaud> ArnaudSansDoublons = ListArnauds.GroupBy(n => n.Name).Select(g => g.First()).ToList();
+            foreach (Arnaud ListArnaud in ArnaudSansDoublons)
             {
-                WriteLine(listArnaud.name);
+                          
+                WriteLine(ListArnaud.Name);
             }
 
             // Clean up the streams and the response.  

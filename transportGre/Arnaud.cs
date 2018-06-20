@@ -12,10 +12,10 @@ namespace transportGre
          *Obtenus grâce à http://json2csharp.com/
          * on a passé l'url openData dans le convertiseur json to c#
          */
-        public string id { get; set; }
-        public string name { get; set; }
-        public double lon { get; set; }
-        public double lat { get; set; }
-        public List<string> listArnauds { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public double Lon { get; set; }
+        public double Lat { get; set; }
+        public List<string> ListArnauds { get; set; }
     }
 }
