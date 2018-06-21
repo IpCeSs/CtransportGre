@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:transportGreMVVM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Transports La Métro Grenoble" Height="350" Width="500">
+    <StackPanel Margin="10">
+        <Label Background="DeepPink">Indiquez Votre Position</Label>
+        <Label>Latutude :</Label>
+        <TextBox Name="Lat"></TextBox>
+        <Label>Longitude :</Label>
+        <TextBox Name="Lon"></TextBox>
+        <Label Background="DeepPink">Indiquez le rayon de Recherche</Label>
+     
+        <Label>Distance en mètres :</Label>
+        <TextBox Name="Dist"></TextBox>
+        <Button Background="Gold" Content="Chercher"/>
+
         
-    </Grid>
+    </StackPanel>
 </Window>
