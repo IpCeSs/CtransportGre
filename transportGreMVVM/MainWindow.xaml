@@ -4,20 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:transportGreMVVM"
+       
         mc:Ignorable="d"
-        Title="Transports La Métro Grenoble" Height="350" Width="500">
+        Title="Transports La Métro Grenoble" Height="450" Width="500">
+    <Window.Resources>
+        <local:Lignes x:Key="ListLib"/>
+       
+    </Window.Resources>
     <StackPanel Margin="10">
         <Label Background="DeepPink">Indiquez Votre Position</Label>
         <Label>Latutude :</Label>
-        <TextBox Name="Lat"></TextBox>
+        <TextBox Name="Lat">45.18864250000001</TextBox>
         <Label>Longitude :</Label>
-        <TextBox Name="Lon"></TextBox>
+        <TextBox Name="Lon" >5.724073599999997</TextBox>
         <Label Background="DeepPink">Indiquez le rayon de Recherche</Label>
      
         <Label>Distance en mètres :</Label>
-        <TextBox Name="Dist"></TextBox>
-        <Button Background="Gold" Content="Chercher"/>
+        <TextBox Name="Dist" >300</TextBox>
+        <Button Background="Gold" Click="Button_Click" Content="Afficher"/>
+        <Label>Nom des Arrêts alentours</Label>
+        <ListBox Name="Lx" Height="100" Binding.SourceUpdated="Button_Click"/>
+        <Button Background="Gold" Click="Button_Reset" Content="reset"/>
 
-        
+
     </StackPanel>
+
 </Window>
