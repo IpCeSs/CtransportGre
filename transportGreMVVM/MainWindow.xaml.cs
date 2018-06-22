@@ -30,6 +30,7 @@ namespace transportGreMVVM
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)

@@ -6,27 +6,30 @@
         xmlns:local="clr-namespace:transportGreMVVM"
        
         mc:Ignorable="d"
-        Title="Transports La Métro Grenoble" Height="450" Width="500">
+        Title="Transports La Métro Grenoble" Height="550" Width="800">
     <Window.Resources>
         <local:Lignes x:Key="ListLib"/>
        
     </Window.Resources>
-    <StackPanel Margin="10">
+    <Grid>
+    <StackPanel Margin="10" Width="350">
         <Label Background="DeepPink">Indiquez Votre Position</Label>
-        <Label>Latutude :</Label>
-        <TextBox Name="Lat">45.18864250000001</TextBox>
-        <Label>Longitude :</Label>
-        <TextBox Name="Lon" >5.724073599999997</TextBox>
-        <Label Background="DeepPink">Indiquez le rayon de Recherche</Label>
-     
-        <Label>Distance en mètres :</Label>
+        <Label>Latitude :</Label>
+        <TextBox Name="Lat" >45.18864250000001</TextBox>
+        
+        <Label >Longitude :</Label>
+            <TextBox Name="Lon">5.724073599999997</TextBox>
+
+            <Label Background="DeepPink" Margin="0,7,0,0">Indiquez le rayon de Recherche</Label>
+
+            <Label >Distance en mètres :</Label>
         <TextBox Name="Dist" >300</TextBox>
-        <Button Background="Gold" Click="Button_Click" Content="Afficher"/>
-        <Label>Nom des Arrêts alentours</Label>
-        <ListBox Name="Lx" Height="100" Binding.SourceUpdated="Button_Click"/>
-        <Button Background="Gold" Click="Button_Reset" Content="reset"/>
+            <Button Margin="0,5" Background="Gold" Click="Button_Click" Content="RECHERCHER" HorizontalAlignment="Center" Width="80" Cursor="Hand"/>
+        <Label>Nom des arrets alentours</Label>
+        <ListBox Name="Lx" Height="200" Binding.SourceUpdated="Button_Click"/>
+            <Button Margin="0,5" Background="Gold" Click="Button_Reset" Content="RESET" HorizontalAlignment="Center" Width="80" Cursor="Hand"/>
 
 
     </StackPanel>
-
+    </Grid>
 </Window>
