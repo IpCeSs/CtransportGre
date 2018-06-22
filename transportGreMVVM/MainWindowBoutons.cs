@@ -28,9 +28,9 @@ namespace transportGreMVVM
         private String DSaisi { get; set; }
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            XSaisi = Lon.Text.ToString();
-            YSaisi = Lat.Text.ToString();
-            DSaisi = Dist.Text.ToString();
+            XSaisi = Lon.Text;
+            YSaisi = Lat.Text;
+            DSaisi = Dist.Text;
             try
             {
                 Lib Bib = new Lib("http://data.metromobilite.fr/api/linesNear/json?x=" + XSaisi + "&y=" + YSaisi + "&dist=" + DSaisi + "&details=true");
