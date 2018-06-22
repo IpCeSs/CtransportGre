@@ -11,7 +11,7 @@
         <local:Lignes x:Key="ListLib"/>
 
     </Window.Resources>
-    <Border Grid.Column="0" CornerRadius="10" Background="LightGray" Margin="0,0,5,0">
+    <Border CornerRadius="10" Background="LightGray" Margin="0,0,5,0">
         <StackPanel Margin="10" Width="350">
             <Label Background="DeepPink">Indiquez Votre Position</Label>
             <Label>Latitude :</Label>

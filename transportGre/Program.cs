@@ -3,6 +3,7 @@ using static System.Console;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using transportGre.Properties;
 
 namespace transportGre
 {
@@ -10,6 +11,8 @@ namespace transportGre
     {
         static void Main(string[] args)
         {
+
+            string url = Settings.Default.URL;
 
             Lib Bib=new Lib("http://data.metromobilite.fr/api/linesNear/json?x=5.709360123&y=45.176494599999984&dist=800&details=true");
             List<Lignes> ListLib = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Lignes>>(Bib.ResponseFromServer);
