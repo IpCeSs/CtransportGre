@@ -18,6 +18,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Microsoft.Maps.MapControl.WPF;
 
+
 namespace transportGreMVVM
 {
     /// <summary>
@@ -28,10 +29,8 @@ namespace transportGreMVVM
         public MainWindow()
         {
             InitializeComponent();
-           
-
         }
-        
+
     }
 }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace transportGre.Properties {
+namespace transportLibrairie.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

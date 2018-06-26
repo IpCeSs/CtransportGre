@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace transportGre
+namespace transportLibrairie
 {
-    class Lignes
+   public class Lignes
     {
         /*
      *Obtenus grâce à http://json2csharp.com/

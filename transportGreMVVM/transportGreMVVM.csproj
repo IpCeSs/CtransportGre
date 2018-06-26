@@ -87,9 +87,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BoutonAffiche.cs" />
-    <Compile Include="BoutonReset.cs" />
-    <Compile Include="Lignes.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -125,6 +122,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\transportGre\transportGre.csproj">
+      <Project>{26fd12cc-8750-4cca-a0bb-5c3877992160}</Project>
+      <Name>transportGre</Name>
+    </ProjectReference>
     <ProjectReference Include="..\transportLibrairie\transportLibrairie.csproj">
       <Project>{7648d703-6e96-410d-a361-e3f39b09a5db}</Project>
       <Name>transportLibrairie</Name>
