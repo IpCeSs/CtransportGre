@@ -30,7 +30,7 @@
             <Label>Nom des arrets alentours</Label>
             <ListBox Name="Lx" Height="200" Binding.SourceUpdated="Button_Click"/>
             <Button Margin="0,5" Background="Gold" Click="Button_Reset" Content="RESET" HorizontalAlignment="Center" Width="80" Cursor="Hand"/>
-            <m:Map Center="45.18864250000001,5.724073599999997" ZoomLevel="12" CredentialsProvider="AlIYClzyMbXh4GMtrvVi6xMfLfIxhKb2BiDZ1eihB5J4VEtA3FU-T5IGLzKVAehY" Height="300" x:Name="myMap" Mode="AerialWithLabels"/>
+            <m:Map Center="45.18864250000001,5.724073599999997" ZoomLevel="14" CredentialsProvider="AlIYClzyMbXh4GMtrvVi6xMfLfIxhKb2BiDZ1eihB5J4VEtA3FU-T5IGLzKVAehY" Height="300" x:Name="myMap" Mode="AerialWithLabels"/>
 
             <Button Margin="0,5" Background="Gold" Click="Change_Map_Mode" Content="Change Map Mode" HorizontalAlignment="Center" Width="120" Cursor="Hand"/>
 

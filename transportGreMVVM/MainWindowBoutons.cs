@@ -102,6 +102,7 @@ namespace transportGreMVVM
         {
             Lx.Items.Clear();
             myMap.Children.Clear();
+            
         }
 
     }
