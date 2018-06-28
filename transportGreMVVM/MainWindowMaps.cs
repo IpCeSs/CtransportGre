@@ -39,16 +39,17 @@ namespace transportGreMVVM
         //Récupérer tous les points de la liste d'arrets
         public void Add_Pin_Stops(Double Lat, Double Lon, String Name)
         {
-            Location pinLocation = new Location(Lat, Lon);
+             Location pinLocation = new Location(Lat, Lon);
             //The pushpin to add to the map.
             Pushpin pin = new Pushpin();
             pin.Location = pinLocation;
             //permet d'afficher le nom de la station on hover sur le pushpin
             ToolTipService.SetToolTip(pin, $"{Name}");
             myMap.Children.Add(pin);
+           
         }
 
-
+       
         //Récupère le point de localisation de départ (celle entrée par l'utilisateur)
         public void You_Are_Here(String Latitude, String Longitude)
         {

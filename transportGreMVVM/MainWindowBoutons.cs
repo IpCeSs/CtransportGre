@@ -22,6 +22,7 @@ using Microsoft.Maps.MapControl.WPF.Design;
 using System.Globalization;
 
 
+
 namespace transportGreMVVM
 {
     public partial class MainWindow : Window
@@ -45,11 +46,11 @@ namespace transportGreMVVM
             YSaisi = Lati.Text;
             DSaisi = Dist.Text;
 
-           /*
-            * On encapsule l'action du click dans un try catch
-            * qui attrappera l'exception si l'utilisateur
-            * entre un mauvais format de données (!=coordonées Geoloc)
-            */
+            /*
+             * On encapsule l'action du click dans un try catch
+             * qui attrappera l'exception si l'utilisateur
+             * entre un mauvais format de données (!=coordonées Geoloc)
+             */
             try
             {
                 //On appelle la fonction qui affiche le pin vous êtes ici
@@ -61,7 +62,7 @@ namespace transportGreMVVM
                  */
 
                 Lib Bib = new Lib("http://data.metromobilite.fr/api/linesNear/json?x=" + XSaisi + "&y=" + YSaisi + "&dist=" + DSaisi + "&details=true");
-               
+
                 /*
                  * écriture alternative pour la concaténation >> $ {}
                  * Lib Bib = new Lib ($"http://data.metromobilite.fr/api/linesNear/json?x={XSaisi}&y={YSaisi}&dist={DSaisi}&details=true"); 
@@ -84,6 +85,7 @@ namespace transportGreMVVM
                 {
                     Lx.Items.Add(Lib.Name);
                     Add_Pin_Stops(Lib.Lat, Lib.Lon, Lib.Name);
+
                 }
 
             }
@@ -94,16 +96,17 @@ namespace transportGreMVVM
             }
         }
 
-       /* Fonction pour bouton Reset qui supprime et les éléments 
-        * présents dans la liste de recherche (Items)
-        * et les pins(children) correspondants sur la map
-        */
+        /* Fonction pour bouton Reset qui supprime et les éléments 
+         * présents dans la liste de recherche (Items)
+         * et les pins(children) correspondants sur la map
+         */
         public void Button_Reset(object sender, RoutedEventArgs e)
         {
             Lx.Items.Clear();
             myMap.Children.Clear();
-            
         }
+
+
 
     }
 }
